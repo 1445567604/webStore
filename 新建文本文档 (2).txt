@@ -1,0 +1,57 @@
+linux ：用户名 都为root 密码 123456
+
+centos1 ：已安装软件 mysql jdk eclipse tomcat redis 
+         redis 配置文件 3 个  位置 /myredis
+	 keepalive /usr/local 负载均衡主机
+	 zookeeper  /usr/local/zookeeper   日志、数据文件存放 /home/hadoop/zookeeper
+         hive 
+	 hadoop /home/hadoop
+    	 hadoop /home/flume
+
+
+centos2： /usr/local/cluster 下面配置三个 redis.conf 文件 redis6379.conf（slave） redis6380.conf （master）redis6371.conf（slave）
+	  /usr/local/redis-3.0.4   redis-3.0.4集群管理工具
+./redis-trib.rb create --replicas 192.168.229.130:6379 192.168.229.130:6380 192.168.229.130:6381 192.168.229.129:6382 192.168.229.129:6383 192.168.229.129:6384
+	  mysql 
+	  service realserver start 配置虚拟端口号
+	  jdk   /usr/local
+	  zookeeper  /usr/local/zookeeper   日志、数据文件存放 /home/hadoop/zookeeper
+          hadoop /home/hadoop
+          strom /export/servers
+	  apache-tomcat-7.0.47  /root 部署了dubbo服务
+          tomcat /usr/local
+	  
+
+
+centos3： /usr/local/cluster 下面配置三个 redis.conf 文件 redis6384.conf（master）  redis6383.conf （master）redis6382.conf
+	  keepalive 负载均衡备机
+	  mysql
+	  ftp图片上传 /home/ftp
+	  nginx  /usr/local
+	  jdk   /usr/local
+	  zookeeper  /usr/local/zookeeper   日志、数据文件存放 /home/hadoop/zookeeper
+          hadoop /home/hadoop
+	  hive /home/hive
+          sqoop  /home/sqoop
+          flume /home/flume
+	  strom /export/servers
+	  python2.7 /usr/local
+            tomcat /usr/local  /usr/local/tomcat/webappspwd安装好了solr程序
+	    solr /usr/local
+	    sorl集群
+		/solr/local/solr-cloud
+		/usr/local tomcat1 、tomcat2、tomcat3、tomcat4
+
+        
+	    
+-------------------
+github 账号   [user]
+	name = neteye
+	email = 908635882@qq.com
+
+
+
+
+centos4：mysql
+        //usr/local/tomcat-deploy/  热部署项目的多个tomcat
+        service realserver start 配置虚拟端口号
